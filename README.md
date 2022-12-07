@@ -1,4 +1,4 @@
-# python-api-challenge
+# Ideal Vacation Spots 
 
 In this project, I used APIs to show the weather conditions of a random set of places in the world, and narrowed those conditions to specific preferences to determine the ideal places to vacation. 
 
