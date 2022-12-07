@@ -1,6 +1,6 @@
 # python-api-challenge
 
-In this assignment, I used APIs to show the weather conditions of a random set of places in the world, and narrowed those conditions to specific preferences to determine the ideal places to vacation. 
+In this project, I used APIs to show the weather conditions of a random set of places in the world, and narrowed those conditions to specific preferences to determine the ideal places to vacation. 
 
 __WeatherPy__
 First I created a Python script that randomly selected at least 500 unique (non-repeated) cities based on latitude and longitude.
