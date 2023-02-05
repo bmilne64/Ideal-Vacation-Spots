@@ -19,74 +19,74 @@ Map Visualization of Ideal Vacation Spots using APIs
 * Perform a weather check on each city using a series of successive API calls
     * Include a print log of each city as it'sbeing processed (with the city number and city name)
 
-![](/graph_pngs/list.png)
+![](Project/code/WeatherPy/graph_pngs/list.png)
 
 ### Step 3 - Convert Raw Data to DataFrame
 
 *  Export the city data into a .csv
 *  Display the DataFrame 
 
-![](graph_pngs/df.png)
+![](Project/code/WeatherPy/graph_pngs/df.png)
 
 ### Step 4 - Plot the Data 
 
 * This scatterplot shows the relationship between the cities' latitude and maximum temperature
 
-![](graph_pngs/Lat_Vs_Temp.png)
+![](Project/code/WeatherPy/graph_pngs/Lat_Vs_Temp.png)
 
 * This scatterplot shows the relationship between the cities' latitude and humidity
 
-![](graph_pngs/Lat_Vs_Humidity.png)
+![](Project/code/WeatherPy/graph_pngs/Lat_Vs_Humidity.png)
 
 * This scatterplot shows the relationship between the cities' latitude and cloudiness
 
-![](graph_pngs/Lat_Vs_Cloudiness.png)
+![](Project/code/WeatherPy/graph_pngs/Lat_Vs_Cloudiness.png)
 
 * This scatterplot shows the relationship between the cities' latitude and wind speed
 
-![](graph_pngs/Lat_Vs_Wind_Speed.png)
+![](Project/code/WeatherPy/graph_pngs/Lat_Vs_Wind_Speed.png)
 
 ### Step 5 - Linear Regressions 
 
 * This linear regression shows a strong negative correlation between the cities' latitude and maximum temperature in the northern hemisphere
     * As the cities' latitude increases, the maximum temperature decreases
 
-![](graph_pngs/Northern_Hem_Lat_Vs_Temp.png)
+![](Project/code/WeatherPy/graph_pngs/Northern_Hem_Lat_Vs_Temp.png)
 
 * This linear regression shows a strong positive correlation between the cities' latitude and maximum temperature in the southern hemisphere
     * As the cities' latitude increases, the maximum temperature increases
     
-![](graph_pngs/Southern_Hem_Lat_Vs_Temp.png)
+![](Project/code/WeatherPy/graph_pngs/Southern_Hem_Lat_Vs_Temp.png)
 
 * This linear regression shows a weak positive correlation between the cities' latitude and humidity in the northern hemisphere
     * As the cities' latitude increases, the humidity also increases slightly
     
-![](graph_pngs/Northern_Hem_Lat_Vs_Humidity.png)
+![](Project/code/WeatherPy/graph_pngs/Northern_Hem_Lat_Vs_Humidity.png)
 
 * This linear regression shows a weak positive correlation between the cities' latitude and humidity in the southern hemisphere
     * As the cities' latitude increases, the humidity also increases slightly
     
-![](graph_pngs/Southern_Hem_Lat_Vs_Humidity.png)
+![](Project/code/WeatherPy/graph_pngs/Southern_Hem_Lat_Vs_Humidity.png)
 
 * This linear regression shows a weak positive correlation between the cities' latitude and cloudiness in the northern hemisphere
     * As the cities' latitude increases, the cloudiness also increases slightly
     
-![](graph_pngs/Northern_Hem_Lat_Vs_Cloudiness.png)
+![](Project/code/WeatherPy/graph_pngs/Northern_Hem_Lat_Vs_Cloudiness.png)
 
 * This linear regression shows a weak positive correlation between the cities' latitude and cloudiness in the southern hemisphere
     * As the cities' latitude increases, the cloudiness also increases slightly
     
-![](graph_pngs/Southern_Hem_Lat_Vs_Cloudiness.png)
+![](Project/code/WeatherPy/graph_pngs/Southern_Hem_Lat_Vs_Cloudiness.png)
 
 * This linear regression shows a very weak positive correlation between the cities' latitude and wind speed in the northern hemisphere
     * As the cities' latitude increases, the wind speed also increases slightly
     
-![](graph_pngs/Northern_Hem_Lat_Vs_Wind_Speed.png)
+![](Project/code/WeatherPy/graph_pngs/Northern_Hem_Lat_Vs_Wind_Speed.png)
 
 * This linear regression shows a weak negative correlation between the cities' latitude and wind speed in the southern hemisphere
     * As the cities' latitude increases, the wind speed decreases slightly
     
-![](graph_pngs/Southern_Hem_Lat_Vs_Wind_Speed.png)
+![](Project/code/WeatherPy/graph_pngs/Southern_Hem_Lat_Vs_Wind_Speed.png)
 
 ---------------------------------------------------
 
@@ -96,7 +96,7 @@ Map Visualization of Ideal Vacation Spots using APIs
 
 * Load the csv exported in Part I:Weather into a DataFrame
 
-![](images/df.png)
+![](Project/code/VacationPy/images/df.png)
 
 ### Step 2 - Humidity Heatmap
 
@@ -104,7 +104,7 @@ Map Visualization of Ideal Vacation Spots using APIs
 * Use the Lat and Lng as locations and Humidity as the weight
 * Add Heatmap layer to map
 
-![](images/heat_map.png)
+![](Project/code/VacationPy/images/heat_map.png)
 
 ### Step 3 - Create New DataFrame Fitting Weather Criteria
 
@@ -114,7 +114,7 @@ Map Visualization of Ideal Vacation Spots using APIs
     * Zero cloudiness
 *  Drop any rows will null values
 
-![](images/df2.png)
+![](Project/code/VacationPy/images/df2.png)
 
 ### Step 4 - Create Hotel Map
 
@@ -124,6 +124,6 @@ Map Visualization of Ideal Vacation Spots using APIs
 * Store the first Hotel result into the DataFrame
 * Plot markers on top of the heatmap
 
-![](../Project/code/VacationPy/images/hotel_map.pngimages/hotel_map.png)
+![](Project/code/VacationPy/images/hotel_map.pngimages/hotel_map.png)
 
 <b>Contact:</b> bronwynmilne64@gmail.com
