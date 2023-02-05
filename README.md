@@ -1,6 +1,6 @@
 ## Ideal Vacation Spots
 
-![](images/hotel_map.png)
+![](Project/code/VacationPy/images/hotel_map.png)
 
 Map Visualization of Ideal Vacation Spots using APIs
 
@@ -19,7 +19,7 @@ Map Visualization of Ideal Vacation Spots using APIs
 * Perform a weather check on each city using a series of successive API calls
     * Include a print log of each city as it'sbeing processed (with the city number and city name)
 
-![](graph_pngs/list.png)
+![](/graph_pngs/list.png)
 
 ### Step 3 - Convert Raw Data to DataFrame
 
@@ -124,6 +124,6 @@ Map Visualization of Ideal Vacation Spots using APIs
 * Store the first Hotel result into the DataFrame
 * Plot markers on top of the heatmap
 
-![](images/hotel_map.png)
+![](../Project/code/VacationPy/images/hotel_map.pngimages/hotel_map.png)
 
 <b>Contact:</b> bronwynmilne64@gmail.com
