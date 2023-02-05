@@ -124,6 +124,8 @@ Map Visualization of Ideal Vacation Spots using APIs
 * Store the first Hotel result into the DataFrame
 * Plot markers on top of the heatmap
 
-![](Project/code/VacationPy/images/hotel_map.pngimages/hotel_map.png)
+![](Project/code/VacationPy/images/hotel_map.png)
+
+---------------------------------------------------
 
 <b>Contact:</b> bronwynmilne64@gmail.com
