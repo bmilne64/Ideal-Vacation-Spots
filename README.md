@@ -1,28 +1,129 @@
-# Ideal Vacation Spots 
+## Ideal Vacation Spots
 
-In this project, I used APIs to show the weather conditions of a random set of places in the world, and narrowed those conditions to specific preferences to determine the ideal places to vacation. 
+![](images/hotel_map.png)
 
-__WeatherPy__
-First I created a Python script that randomly selected at least 500 unique (non-repeated) cities based on latitude and longitude.
+Map Visualization of Ideal Vacation Spots using APIs
 
-Second , I performed a weather check on each of the cities using a series of successive API calls. I included a print log of each city as it's being processed, with the city number and city name.
+### Dataset:
 
-Then I created a series of scatter plots to showcase the following relationships:
-* Temperature (F) vs. Latitude
-* Humidity (%) vs. Latitude
-* Cloudiness (%) vs. Latitude
-* Wind Speed (mph) vs. Latitude
+ [Weather API](https://openweathermap.org/api),  [Google Maps API](https://mapsplatform.google.com/)
 
-Finally, I saved a CSV of all retrieved data and a PNG image for each scatter plot.
+## Objective #1: Weather 
 
-__VacationPy__
-First, I created a heat map that displays the humidity for every city from WeatherPy.
+### Step 1 - Generate Cities List 
 
-Second, I narrowed down the DataFrame to fit my ideal weather conditions and dropped any rows that didn't satisfy all three conditions. 
-  * A max temperature lower than 80 degrees but higher than 70.
-  * Wind speed less than 10 mph.
-  * Zero cloudiness.
+* Create a list of cities from a random set of latitudes and longitudes using citipy
 
-Then, I used Google Places API to find the first hotel for each city located within 5,000 meters of the coordinates.
+### Step 2 - Perform API Calls
 
-Finally, I plotted the hotels on top of the humidity heatmap, with each pin containing the Hotel Name, City, and Country.
+* Perform a weather check on each city using a series of successive API calls
+    * Include a print log of each city as it'sbeing processed (with the city number and city name)
+
+![](graph_pngs/list.png)
+
+### Step 3 - Convert Raw Data to DataFrame
+
+*  Export the city data into a .csv
+*  Display the DataFrame 
+
+![](graph_pngs/df.png)
+
+### Step 4 - Plot the Data 
+
+* This scatterplot shows the relationship between the cities' latitude and maximum temperature
+
+![](graph_pngs/Lat_Vs_Temp.png)
+
+* This scatterplot shows the relationship between the cities' latitude and humidity
+
+![](graph_pngs/Lat_Vs_Humidity.png)
+
+* This scatterplot shows the relationship between the cities' latitude and cloudiness
+
+![](graph_pngs/Lat_Vs_Cloudiness.png)
+
+* This scatterplot shows the relationship between the cities' latitude and wind speed
+
+![](graph_pngs/Lat_Vs_Wind_Speed.png)
+
+### Step 5 - Linear Regressions 
+
+* This linear regression shows a strong negative correlation between the cities' latitude and maximum temperature in the northern hemisphere
+    * As the cities' latitude increases, the maximum temperature decreases
+
+![](graph_pngs/Northern_Hem_Lat_Vs_Temp.png)
+
+* This linear regression shows a strong positive correlation between the cities' latitude and maximum temperature in the southern hemisphere
+    * As the cities' latitude increases, the maximum temperature increases
+    
+![](graph_pngs/Southern_Hem_Lat_Vs_Temp.png)
+
+* This linear regression shows a weak positive correlation between the cities' latitude and humidity in the northern hemisphere
+    * As the cities' latitude increases, the humidity also increases slightly
+    
+![](graph_pngs/Northern_Hem_Lat_Vs_Humidity.png)
+
+* This linear regression shows a weak positive correlation between the cities' latitude and humidity in the southern hemisphere
+    * As the cities' latitude increases, the humidity also increases slightly
+    
+![](graph_pngs/Southern_Hem_Lat_Vs_Humidity.png)
+
+* This linear regression shows a weak positive correlation between the cities' latitude and cloudiness in the northern hemisphere
+    * As the cities' latitude increases, the cloudiness also increases slightly
+    
+![](graph_pngs/Northern_Hem_Lat_Vs_Cloudiness.png)
+
+* This linear regression shows a weak positive correlation between the cities' latitude and cloudiness in the southern hemisphere
+    * As the cities' latitude increases, the cloudiness also increases slightly
+    
+![](graph_pngs/Southern_Hem_Lat_Vs_Cloudiness.png)
+
+* This linear regression shows a very weak positive correlation between the cities' latitude and wind speed in the northern hemisphere
+    * As the cities' latitude increases, the wind speed also increases slightly
+    
+![](graph_pngs/Northern_Hem_Lat_Vs_Wind_Speed.png)
+
+* This linear regression shows a weak negative correlation between the cities' latitude and wind speed in the southern hemisphere
+    * As the cities' latitude increases, the wind speed decreases slightly
+    
+![](graph_pngs/Southern_Hem_Lat_Vs_Wind_Speed.png)
+
+---------------------------------------------------
+
+## Objective #2: Vacation
+
+### Step 1 - Store Part I results into DataFrame
+
+* Load the csv exported in Part I:Weather into a DataFrame
+
+![](images/df.png)
+
+### Step 2 - Humidity Heatmap
+
+* Configure gmaps
+* Use the Lat and Lng as locations and Humidity as the weight
+* Add Heatmap layer to map
+
+![](images/heat_map.png)
+
+### Step 3 - Create New DataFrame Fitting Weather Criteria
+
+*  Narrow down the cities to fit weather conditions
+    * A max temperature lower than 80 degrees but higher than 70
+    * Wind speed less than 10 mph
+    * Zero cloudiness
+*  Drop any rows will null values
+
+![](images/df2.png)
+
+### Step 4 - Create Hotel Map
+
+* Add a "Hotel Name" column to the DataFrame
+* Set parameters to search for hotels with 5000 meters
+* Hit the Google Places API for each city's coordinates
+* Store the first Hotel result into the DataFrame
+* Plot markers on top of the heatmap
+
+![](images/hotel_map.png)
+
+<b>Contact:</b> bronwynmilne64@gmail.com
